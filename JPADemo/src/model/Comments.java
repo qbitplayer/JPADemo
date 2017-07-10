@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 
 /**
@@ -28,7 +29,11 @@ public class Comments {
 
 		private Date   datum;
 		private String summary;
-		private String comments; 
+		private String comments;
+		
+		
+		@Transient
+		private String rate; 
 		
 		public Comments(){
 			setId(-1); 
@@ -87,6 +92,16 @@ public class Comments {
 
 		public void setUser(String user) {
 			this.user = user;
+		}
+
+
+		public String getRate() {
+			return rate;
+		}
+
+
+		public void setRate(String rate) {
+			this.rate = rate;
 		}
 		
 }

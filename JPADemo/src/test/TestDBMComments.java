@@ -17,7 +17,7 @@ public class TestDBMComments {
 
 	
 
-	//@Test
+	@Test
 	public void testInsert(){
 		boolean result = true;
 		DBManager dbManager =   new DBManager(); 		
@@ -31,7 +31,7 @@ public class TestDBMComments {
 	}
 	
 	
-	//@Test
+	@Test
 	public void testGet(){
 		
 		DBManager dbManager =   new DBManager(); 		
@@ -48,7 +48,7 @@ public class TestDBMComments {
 	}
 	
 	
-	//@Test
+	@Test
 	public void testUpdate(){
 	
 		DBManager dbManager =   new DBManager(); 		

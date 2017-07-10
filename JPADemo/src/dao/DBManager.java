@@ -91,6 +91,18 @@ public class DBManager {
 		 return new ArrayList<T>(query.getResultList()); 
 	}
 
+	
+	/**
+	 * SELECT c FROM  Comments c WHERE c.user = 'pepe'   
+	 * SELECT c FROM  Comments c WHERE c.emeil = 'pepe@pepe.com'  
+	 * SELECT c FROM  Comments c WHERE c.id = 12  
+	 *  
+	 * 
+	 * @param clazz
+	 * @param column
+	 * @param equal
+	 * @return
+	 */
 	@SuppressWarnings("unchecked")
 	public <T> ArrayList<T> selectEqual(Class<T> clazz,String column,String equal){
 		  Query query = entitymanager.createQuery(
@@ -115,6 +127,7 @@ public class DBManager {
 				  	+ "WHERE c."+column+" "+bt);	    
 		  return new ArrayList<T>(query.getResultList()); 
 	}
+	
 	
 	   
 	public void close() {
